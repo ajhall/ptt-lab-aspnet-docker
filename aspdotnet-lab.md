@@ -500,6 +500,8 @@ Run `dotnet publish --help` or check the [online documentation](https://docs.mic
 * Stop any copies of your app that you might already have running.
 * Run `WebAPI.exe` and use Postman to try making some requests to it.
 
+---
+
 ## BONUS ZONE
 
 Now you know how to build a ASP.NET Core app, run it on your computer, and prepare a build for your users.
