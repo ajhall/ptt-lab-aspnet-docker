@@ -602,8 +602,6 @@ docker image ls mywebapi
 
 ### 7. Run your Docker image
 
-#### Running your image
-
 After your image builds successfully, you can run the container with [`docker run`](https://docs.docker.com/engine/reference/commandline/run/).
 
 You can use `docker run --help` to see a list of options, but it's a long and unfiltered list. For now, you just need to know the basics.
@@ -626,7 +624,7 @@ Because it's in a container, you can't actually reach it at port 80 just yet. Pr
 
 One thing before you move on. Run [`docker ps`](https://docs.docker.com/engine/reference/commandline/ps/) to see all the containers you have running on your computer. If you ran `docker run` and exited with <kbd>CTRL</kbd>+<kbd>C</kbd>, you should see at least one item on this list.
 
-Find the container you started up and stop it with [`docker stop`](https://docs.docker.com/engine/reference/commandline/stop/). You'll see the container ID printed as confirmation that it stopped.
+Find the container you started up and stop it with [`docker stop [CONTAINER ID]`](https://docs.docker.com/engine/reference/commandline/stop/). You'll see the container ID printed as confirmation that it stopped.
 
 ```powershell
 > docker ps
@@ -640,11 +638,11 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 You can also specify a container by its name (from the `NAMES` column, not the image name) or by a partial container ID.
 
 ```powershell
-> docker stop 56c
-56c
-
 > docker stop hardcore_volhard
 hardcore_volhard
+
+> docker stop 56c
+56c
 ```
 
 Then, use [`docker rm`](https://docs.docker.com/engine/reference/commandline/rm/) to get rid of the stopped container completely. If you need to see the name or ID of a stopped container, run `docker ps --all` first.
@@ -667,7 +665,7 @@ Or take a shortcut and use [`docker rm --force`](https://docs.docker.com/engine/
 
 #### Poking a hole
 
-To get to port 80 inside the container, you'll need to use the [`--publish` option](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose) (often shortened to `-p`) of `dotnet run`. This maps from a port on your local PC to a port inside the container, letting it communicate freely on that port. To specify the port mapping, provide a port number on your local PC followed by a port number inside the container, separated by a colon.
+To get to port 80 inside the container, you'll need to use the [`--publish` option](https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose) (often shortened to `-p`) of `docker run`. This maps from a port on your local PC to a port inside the container, letting it communicate freely on that port. To specify the port mapping, provide a port number on your local PC followed by a port number inside the container, separated by a colon.
 
 Let's map local port `5000` to container port `80`. Make sure you specify your `docker run` options **before** the image name, or else they'll get passed through as parameters to the app running inside the container!
 
