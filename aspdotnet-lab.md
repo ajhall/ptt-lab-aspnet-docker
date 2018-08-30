@@ -567,7 +567,7 @@ When the build starts, you'll see it go through your Dockerfile line by line, di
 
 #### Finding your image
 
-After you build an image in Exercise 6, you can see it (and any other Docker images on your machine) by running [`docker image ls`](https://docs.docker.com/engine/reference/commandline/image_ls/). The newest images will show at the top of the list, so the one you just built should be at the very top with the tag you specified displayed in the `REPOSITORY` column.
+After you build an image, you can see it (and any other Docker images on your machine) by running [`docker image ls`](https://docs.docker.com/engine/reference/commandline/image_ls/). The newest images will show at the top of the list, so the one you just built should be at the very top with the tag you specified displayed in the `REPOSITORY` column.
 
 You can also filter the list of images to your specific image by adding the repository name as an extra parameter to the `docker image ls` command.
 
