@@ -379,6 +379,8 @@ Use Postman to send POST requests to <https://localhost:5001/api/math/divide>.
 
 NuGet packages included in your project are specified in your `csproj` file. Instead of manually editing the list of packages and versions, you can [use the `dotnet` tool](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package) to make the changes for you.
 
+[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) is a package that automatically produces documentation for your API. Let's install that and take a look at the documentation site it produces.
+
 #### Exercise 3
 
 * Use the `dotnet` tool to install [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) version 3.0.0.
