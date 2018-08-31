@@ -2,12 +2,12 @@
 
 ## Goals
 
-* Build a simple Web API without any behind-the-scenes help from Visual Studio
+* Build a Web API without any behind-the-scenes help from Visual Studio
 * Keep things simple
   * Rely on `dotnet` CLI tools - no build scripts
   * Understand what every file in your project is
   * Stick with the defaults until there's a reason not to
-* Make a simple API and use Postman to interact with it
+* Use Postman to interact with your API
 
 ### Bonus goal
 
