@@ -296,7 +296,7 @@ public class MyController : ControllerBase
   }
 
   [HttpGet]
-  public ActionResult<IEnumerable<string>> Get()
+  public ActionResult<string> Get()
   {
     _logger.LogWarning("Warning!");
     return "Got";
