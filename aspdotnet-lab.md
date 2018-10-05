@@ -22,6 +22,8 @@
 choco install dotnetcore-sdk vscode postman docker-for-windows
 ```
 
+**Note:** You'll still need to install the C# and Docker extensions for Visual Studio Code manually.
+
 ### Required
 
 * [.NET Core 2.1 SDK](https://www.microsoft.com/net/download)
@@ -430,7 +432,7 @@ Create a new file named `appsettings.Production.json`. Big numbers are always mo
 
 ```json
 {
-  "Math" {
+  "Math": {
     "Multiplier": 1000
   }
 }
@@ -603,7 +605,7 @@ docker image ls mywebapi
 #### Verify
 
 * Run `docker image ls` and find the image you created.
-* Make sure the image is tagged as `webapi`.
+* Make sure the image is tagged as `mywebapi`.
 
 ---
 
