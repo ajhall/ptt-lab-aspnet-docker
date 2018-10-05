@@ -16,6 +16,12 @@
 
 ## Prerequisites
 
+### Quick install with Chocolatey
+
+```powershell
+choco install dotnetcore-sdk vscode postman docker-for-windows
+```
+
 ### Required
 
 * [.NET Core 2.1 SDK](https://www.microsoft.com/net/download)
@@ -114,7 +120,7 @@ You're starting a new project, so the `dotnet new` command is what you want. Use
 
 You can also use `dotnet help new` to open the [help page for `dotnet new`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore21) with more thorough documentation.
 
-In the documentation, you'll see that you need to run `dotnet new <TEMPLATE>` to generate a new project. Let's make a web api with the ASP.NET Core Web API template (`webapi`). Make sure you're in your work folder and then run `dotnet new webapi`.
+In the documentation, you'll see that you need to run `dotnet new <TEMPLATE>` to generate a new project. Let's make a web API with the ASP.NET Core Web API template (`webapi`). Make sure you're in your work folder and then run `dotnet new webapi`.
 
 ```powershell
 > dotnet new webapi
