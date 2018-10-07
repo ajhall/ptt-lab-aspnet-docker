@@ -20,9 +20,8 @@
 
 ```powershell
 choco install dotnetcore-sdk vscode postman docker-for-windows
+code --install-extension ms-vscode.csharp --install-extension peterjausovec.vscode-docker
 ```
-
-**Note:** You'll still need to install the C# and Docker extensions for Visual Studio Code manually.
 
 ### Required
 
