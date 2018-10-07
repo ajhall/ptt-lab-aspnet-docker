@@ -455,6 +455,7 @@ Based on this, you can tell which settings file your app will use. Now, make use
 * Change the code in `MathController` so that all outputs are multiplied by the multiplier you specify.
 * Settings are read on-the-fly. Update the settings file and make another request to your API to see the new multiplier take effect without restarting your app.
 * [Change the `ASPNETCORE_ENVIRONMENT` environment variable](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-2.1#windows) to `Development` or `Production` and restart your app to read from the specified settings file.
+  * **Note:** Changing an environment variable from the command line only affects your current command line session. Make sure you restart your app from the same command line session that you used to change the environment variable. Alternatively, set the value globally. See the linked documentation for details.
 
 #### Tips
 
@@ -682,7 +683,7 @@ Let's map local port `5000` to container port `80`. Make sure you specify your `
 docker run --publish 5000:80 mywebapi
 ```
 
-Now you can communicate with your API at <http://localhost:5000>.
+Now you can communicate with your API at <http://localhost:5000>. Note that this is different port (5000 instead of 5001) and protocol (HTTP instead of HTTPS) from what you were using before, so make sure you update your URL in Postman.
 
 #### Exercise 7
 
@@ -740,6 +741,8 @@ Notice the line that says `COPY --from=builder`? This allows you to move files b
 Use this example to help you design a Dockerfile that builds your app in one environment and adds the compiled output to an output image.
 
 #### Exercise 8
+
+First, delete the `./output` and `./bin` folders in your project. This will clear out any output left over from previous executions of `dotnet publish` and prove that this new build is happening entirely inside the Docker build process.
 
 Create a multi-stage Dockerfile for your ASP.NET Core app.
 
