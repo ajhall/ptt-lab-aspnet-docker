@@ -56,6 +56,6 @@ Open the settings (File > Settings) and turn off "SSL certificate verification" 
 
 ### Make a request
 
-To make a request, just put a URL into the "Enter request URL" box and set the HTTP verb you want to use. If you switch to the POST verb, you'll see the "Body" tab light up under the URL bar. This is where you'll define what data gets sent with your POST request.
+To make a request, just put a URL into the "Enter request URL" box, set the HTTP verb you want to use, and click Send. If you switch to the POST verb, you'll see the "Body" tab light up under the URL bar. This is where you'll define what data gets sent with your POST request.
 
 To start, try making a GET request to <https://localhost:5001/api/values/1>. You should see the word `value` as a response, which is hard-coded in the `Get(int id)` method. In the next step, we'll change this to echo back the input you send it.
