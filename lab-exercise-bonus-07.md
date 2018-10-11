@@ -16,7 +16,7 @@ docker run mywebapi
 
 Run this command and you'll see output from your app running inside the container you built. It should also specify that it's listening on port 80. This is different from port 5000 and port 5001 that it ran on locally - long story short, the `microsoft/dotnet:2.1-aspnetcore-runtime` image is configured to run the server on port 80 by default.
 
-Because it's in a container, you can't actually reach it at port 80 just yet. Press <kbd>CTRL</kbd>+<kbd>C</kbd> to break out of the container and get back to the command line.
+By default, Docker doesn't allow access to any ports running inside the container. Because your app is now running in a container, you can't actually reach it at port 80 just yet. Press <kbd>CTRL</kbd>+<kbd>C</kbd> to break out of the container and get back to the command line.
 
 ## Cleaning up
 
