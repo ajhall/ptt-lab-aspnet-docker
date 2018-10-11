@@ -37,7 +37,7 @@ ENV PYTHON_VERSION 2.7
 # Set the working directory to /pythonapp
 WORKDIR /pythonapp
 
-# Run app.py when the container launches
+# Run the command 'python app.py' when the container launches
 ENTRYPOINT ["python", "app.py"]
 ```
 
