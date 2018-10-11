@@ -24,6 +24,7 @@ Once Chocolatey is installed, run the following commands.
 
 ```powershell
 choco install dotnetcore-sdk vscode postman docker-for-windows
+refreshenv
 code --install-extension ms-vscode.csharp --install-extension peterjausovec.vscode-docker
 ```
 
