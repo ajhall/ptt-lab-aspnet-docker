@@ -18,6 +18,10 @@
 
 ### Quick install with Chocolatey
 
+If you don't have [Chocolatey](https://chocolatey.org/install), install it first. I recommend the "Install with cmd.exe" instructions.
+
+Once Chocolatey is installed, run the following commands.
+
 ```powershell
 choco install dotnetcore-sdk vscode postman docker-for-windows
 code --install-extension ms-vscode.csharp --install-extension peterjausovec.vscode-docker
