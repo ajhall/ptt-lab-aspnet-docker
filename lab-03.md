@@ -36,14 +36,24 @@ Now you need to combine what you know about your app's base URL and your control
 
 At <https://localhost:5001/api/values>, you should see `["value1","value2"]`. This comes straight from the `Get()` method in `ValuesController.cs`.
 
-The methods in `ValuesController` have associated [attributes](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-2.1#attribute-routing-with-httpverb-attributes) such as `[HttpGet]`, `[HttpPost]`, and `[HttpDelete]` that limit the HTTP verbs that are allowed to trigger them. Navigating to an action in a web browser triggers an HTTP GET request.
+The methods in `ValuesController` have associated [attributes](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-2.1#attribute-routing-with-httpverb-attributes) such as `[HttpGet]`, `[HttpPost]`, and `[HttpDelete]` that limit the [HTTP verbs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) that are allowed to trigger them. Navigating to an action in a web browser triggers an HTTP GET request.
 
-## Using Postman
+## Making HTTP requests
 
-TODO
+It's easy to make HTTP GET requests with your web browser - that's what happens by default whenever you type something into your address bar and press enter. There are many other [HTTP verbs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), though, that take a little more configuration to use.
 
-Self-signed SSL certificates are being blocked:
-Fix this by turning off 'SSL certificate verification' in Settings > General
+### Postman
 
-Try making a GET request to <https://localhost:5001/api/values/1>. You should see the word `value` as a response, which is hard-coded in the `Get(int id)` method. Let's change this to echo back the input you send it.
+[Postman](https://www.getpostman.com/) is a tool to build and test HTTP requests with more flexibility than a web browser.
 
+Open the Postman app, then open a new tab in the main section of the UI (don't use the "New" button at the top left, and don't worry about the "Collections" section for now). Click the dropdown menu that says "GET" to see a list of all the HTTP verbs you have available. For this lab, we'll only need GET and POST.
+
+### Required setup
+
+Open the settings (File > Settings) and turn off "SSL certificate verification" in the General tab. This will let you work with your local API even though its identity hasn't been verified by a certificate authority.
+
+### Make a request
+
+To make a request, just put a URL into the "Enter request URL" box and set the HTTP verb you want to use. If you switch to the POST verb, you'll see the "Body" tab light up under the URL bar. This is where you'll define what data gets sent with your POST request.
+
+To start, try making a GET request to <https://localhost:5001/api/values/1>. You should see the word `value` as a response, which is hard-coded in the `Get(int id)` method. In the next step, we'll change this to echo back the input you send it.
