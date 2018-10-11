@@ -12,7 +12,9 @@ Now that you've picked `microsoft/dotnet:2.1-aspnetcore-runtime` as your base im
 
 ## The Dockerfile
 
-A Dockerfile is a set of instructions to prepare a Docker image. It starts from a base, follows a set of commands, and then takes a snapshot of the environment after the commands are run. The result of this process is the Docker image. When you run an image, it "wakes up" the snapshot, turns it into a container, and starts running.
+A Dockerfile is a set of instructions to prepare a Docker image. It starts from a base image, follows a set of commands, and then takes a snapshot of the environment after the commands are run. The result of this process is the **Docker image**.
+
+When you run a Docker image, it "wakes up" the snapshot, turns it into a **container**, and starts running.
 
 To build a Docker image for your app, you'll want to:
 
