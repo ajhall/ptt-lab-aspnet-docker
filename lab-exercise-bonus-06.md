@@ -4,7 +4,7 @@ To make an effective Docker image for your application, start by picking the env
 
 Microsoft provides [`dotnet` Docker images](https://hub.docker.com/r/microsoft/dotnet/) on Docker Hub that you can use as a base. These images give you a minimal Linux environment that's fully prepared to run .NET Core apps.
 
-Many other maintainers provide similar images for their own applications, too. For example, you might use an [nginx](https://hub.docker.com/_/nginx/) image to start from the base of a webserver that's ready to go, [MySQL](https://hub.docker.com/_/mysql/) for a database, or [golang](https://hub.docker.com/_/golang/) to build apps with the Go programming language.
+Many other maintainers provide similar images for their own applications, too. For example, you might use an [nginx](https://hub.docker.com/_/nginx/) image to start with a webserver that's ready to go, [MySQL](https://hub.docker.com/_/mysql/) for a database, or [golang](https://hub.docker.com/_/golang/) to build apps with the Go programming language.
 
 Take a look at the common tags listed on the [`dotnet` repository](https://hub.docker.com/r/microsoft/dotnet/). One of them is `2.1-aspnetcore-runtime`, which is exactly what you'll need to run your ASP&#46;NET Core app. To specify a specific image by its tag, add a colon after the repository name (`microsoft/dotnet:2.1-aspnetcore-runtime`). If you don't specify a tag, Docker will automatically try to use the `latest` tag.
 
