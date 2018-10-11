@@ -46,7 +46,9 @@ It's easy to make HTTP GET requests with your web browser - that's what happens 
 
 [Postman](https://www.getpostman.com/) is a tool to build and test HTTP requests with more flexibility than a web browser.
 
-Open the Postman app, then open a new tab in the main section of the UI (don't use the "New" button at the top left, and don't worry about the "Collections" section for now). Click the dropdown menu that says "GET" to see a list of all the HTTP verbs you have available. For this lab, we'll only need GET and POST.
+Open the Postman app, then open a new tab in the main section of the UI (don't use the "New" button at the top left, and don't worry about the "Collections" section for now).
+
+Click the dropdown menu that says "GET" to see a list of all the HTTP verbs you have available. For this lab, we'll only need GET and POST.
 
 ### Required setup
 
