@@ -5,6 +5,8 @@ ASP&#46;NET Core provides [built-in dependency injection](https://docs.microsoft
 `ILogger` is a special case because it's provided by default by the ASP&#46;NET Core framework. To get a logger object, just request one in the parameters of a controller's constructor.
 
 ```csharp
+using Microsoft.Extensions.Logging;
+
 public class MyController : ControllerBase
 {
   private readonly ILogger<MyController> _logger;
